@@ -4,12 +4,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task ONE</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: lightslategray;
+        }
+
+        legend.title {
+            font-size: 30px;
+        }
+
+        fieldset.simple-form {
+            border: 1px solid rgb(24, 21, 21);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 25px;
+            background-color: rosybrown  ;
+            color: rgb(195, 225, 253);
+            box-sizing: border-box;    
+        }
+    
+        .form-control {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: left;
+        }
+    
+        .form-control label {
+            margin: 5px 10px 5px 0;
+        }
+    
+        .form-control input {
+            vertical-align: middle;
+            margin: 5px 10px 5px 0;
+            padding: 10px;
+            background-color: #fde7e7;
+            border: 1px solid #e2cfcf;
+        }
+    
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: rgb(101, 125, 148);
+            border: 1px solid #bdbcbc;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 26px;
+        }
+    
+        .submit-btn:hover {
+            background-color: rgb(197, 67, 67);
+        }
+
+    </style>
 </head>
+
 <body>
 <form action="mailto:enitanogbue@gmail.com" method="post" enctype="text/plain">
-    <fieldset>
-        <legend>Simple Form</legend> <br>
+    <fieldset class="simple-form">
+        <legend class="title">Simple Form</legend> <br>
         <div class="form-control">
             <label for="name">Name:</label>
             <input type="name" id="name" placeholder="Enter your name" required />
@@ -38,18 +96,14 @@
         <div class="form-control">
             <label for="male">Male</label>
             <input type="radio" id="male" name="gender" required />
-        </div> <br>
+        </div>
 
         <div class="form-control">
             <label for="female">Female</label>
             <input type="radio" id="female" name="gender" required />
         </div> <br>
 
-        <div class="form-control">
-            <textarea id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea>
-        </div> <br>
-
-        <div class="success-msg">
+        <div>
             <input type="submit" value="Submit" class="submit-btn" />
         </div>
     </fieldset>
@@ -62,6 +116,5 @@ form.addEventListener("submit", (e) => {
     alert("Form Submitted!");
 });
 </script>
-
 </body>
 </html>
